@@ -24,6 +24,10 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.get("/api/:Date", function (req, res) {
+ let date = req.params.Date
+  res.json({"unix":  Math.floor(new Date("2015-12-25").getTime() / 1000),"utc":new Date("2015-12-25").toUTCString()});
+});
 
 
 // listen for requests :)
